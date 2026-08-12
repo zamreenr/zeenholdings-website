@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact &amp; Get a Quote — Zeen Holdings Lanka</title>
+<meta name="description" content="Get in touch with Zeen Holdings Lanka for freight forwarding quotes or tea export enquiries.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav">
+    <a href="index.html" class="brand">
+      <img src="assets/logo-cropped.png" alt="Zeen Holdings Lanka logo">
+      <span class="brand-text">ZEEN HOLDINGS LANKA<span>FREIGHT FORWARDING · TEA EXPORT</span></span>
+    </a>
+    <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('nav.links').classList.toggle('open')">&#9776;</button>
+    <nav class="links">
+      <a href="index.html">Home</a>
+      <a href="freight-forwarding.html">Freight Forwarding</a>
+      <a href="tea-export.html">Tea Export</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta active">Get a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:70px 0 50px;">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h1 style="font-size:clamp(2.2rem,4.4vw,3.4rem);">Tell us what you need moved, or what you're looking to source.</h1>
+    <p class="lede">Fill in the form and we'll get back to you — usually within one business day. Or reach us directly using the details below.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap grid-2">
+    <div>
+      <div class="card">
+        <h3 style="margin-bottom:22px;">Request a quote</h3>
+
+        <!-- Web3Forms is connected and delivering to zeenholdingslk@gmail.com -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f317f981-ff9f-43c5-9770-7e694620292e">
+          <input type="hidden" name="subject" id="subject" value="New enquiry from zeenholdings.com">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="interest">I'm enquiring about</label>
+            <select id="interest" name="interest">
+              <option>Freight forwarding — Air</option>
+              <option>Freight forwarding — Sea</option>
+              <option>Freight forwarding — Import</option>
+              <option>Tea export — I'm a buyer</option>
+              <option>Tea export — I'm a supplier</option>
+              <option>Something else</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Details</label>
+            <textarea id="message" name="message" placeholder="Origin, destination, cargo type and rough volume — or your tea sourcing / buying needs." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send enquiry →</button>
+        </form>
+
+        <script>
+          document.querySelector('#name').closest('form').addEventListener('submit', function () {
+            var interest = document.getElementById('interest').value;
+            var category = 'General';
+            if (interest.indexOf('Freight forwarding') === 0) {
+              category = 'Freight';
+            } else if (interest.indexOf('Tea export') === 0) {
+              category = 'Tea';
+            }
+            document.getElementById('subject').value = 'New ' + category + ' enquiry — zeenholdings.com (' + interest + ')';
+          });
+        </script>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>Sri Lanka office</h3>
+        <p style="margin-top:10px;">20 1/1 Rahumanabath, Periyamulla,<br>Negombo 11500, Sri Lanka</p>
+        <p style="margin-top:14px;"><a href="https://wa.me/94765713685" style="color:var(--blue);font-weight:600;">WhatsApp: +94 76 571 3685</a></p>
+        <p class="small" style="margin-top:6px;">Available during Sri Lanka business hours, with WhatsApp messages generally answered outside those hours too.</p>
+      </div>
+
+      <div class="card" style="margin-bottom:24px;">
+        <h3>Germany contact</h3>
+        <p style="margin-top:10px;">For European buyers and general enquiries</p>
+        <p style="margin-top:14px;"><a href="https://wa.me/4915730769425" style="color:var(--blue);font-weight:600;">WhatsApp: +49 157 3076 9425</a></p>
+        <p class="small" style="margin-top:6px;">Available during Central European business hours.</p>
+      </div>
+
+      <div class="card">
+        <h3>Email</h3>
+        <p style="margin-top:10px;"><a href="mailto:info@zeenholdings.com" style="color:var(--blue);font-weight:600;">info@zeenholdings.com</a></p>
+        <p class="small" style="margin-top:10px;">Because we work across two time zones, we don't keep fixed office hours — but every enquiry, by phone, WhatsApp or email, gets a personal reply, typically within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Zeen Holdings Lanka (Pvt) Ltd</h4>
+        <p>20 1/1 Rahumanabath, Periyamulla,<br>Negombo 11500, Sri Lanka</p>
+        <p>info@zeenholdings.com</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="freight-forwarding.html">Freight Forwarding</a>
+        <a href="tea-export.html">Tea Export</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Reach us</h4>
+        <a href="https://wa.me/94765713685">Sri Lanka: +94 76 571 3685</a>
+        <a href="https://wa.me/4915730769425">Germany: +49 157 3076 9425</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zeen Holdings Lanka (Pvt) Ltd. All rights reserved.</span>
+      <span>zeenholdings.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
