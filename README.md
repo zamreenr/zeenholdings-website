@@ -23,4 +23,4 @@ Every page is plain HTML/CSS — no build step, no installation needed. Open any
 2. In Cloudflare, go to Workers & Pages → create a Pages project → connect it to that repository
 3. Deploy — Cloudflare will auto-detect it as a static site (no build command needed)
 4. Add your `zeenholdings.com` domain in the Cloudflare Pages custom domains tab
-5. Update your nameservers at Namecheap to point to Cloudflare (already done, since email required this)
+5. Update your nameservers at Namecheap to point to Cloudflare (Claude will give you exact steps when you're ready for this)

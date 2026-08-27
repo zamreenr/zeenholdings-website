@@ -385,6 +385,50 @@ footer.site {
 .route-legend span { display: inline-flex; align-items: center; gap: 8px; }
 .route-legend i { width: 8px; height: 8px; border-radius: 50%; background: var(--blue-bright); display: inline-block; }
 
+/* ---------- Scroll reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-stagger.is-visible > * {
+  animation: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Card hover lift ---------- */
+.card, .division-card, .lane, .manifest-row {
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+.card:hover, .division-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(8, 35, 64, 0.12);
+}
+.section-navy .manifest-row:hover, header.site ~ * .manifest-row:hover {
+  transform: translateX(4px);
+}
+
+/* ---------- Animated route lines ---------- */
+.route-map svg path {
+  stroke-dasharray: 4 4;
+  animation: dash-flow 1.8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .route-map svg path { animation: none; }
+}
+@keyframes dash-flow {
+  to { stroke-dashoffset: -16; }
+}
+
+/* ---------- Animated stat counters (visual only, value set by JS) ---------- */
+.stat-num { transition: opacity 0.3s ease; }
+
 /* ---------- Utility ---------- */
 .center { text-align: center; }
 .mt-lg { margin-top: 48px; }
